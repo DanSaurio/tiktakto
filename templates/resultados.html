@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comedor Barato</title>
+    <style>
+        /* Estilo General */
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Azul claro */
+            color: #333;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: #00796b; /* Verde oscuro */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Imagen principal de la cafetería */
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Sección de texto con llamada a la acción */
+        .text-container {
+            flex: 1;
+            margin-left: 20px;
+            color: #00796b; /* Verde oscuro */
+        }
+
+        .text-container h2 {
+            font-size: 2.5em;
+            color: #00796b; /* Verde oscuro */
+        }
+
+        .text-container p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Botón de llamada a la acción */
+        .cta-button {
+            display: inline-block;
+            background-color: #00796b; /* Verde oscuro */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #004d40; /* Verde más oscuro */
+        }
+
+        /* Sección de productos */
+        .products {
+            background-color: #c8e6c9; /* Verde claro */
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .product {
+            margin: 20px;
+            padding: 20px;
+            background-color: #a5d6a7; /* Verde medio */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de testimonios */
+        .testimonials {
+            background-color: #ffebcd; /* Color de fondo beige claro */
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin: 20px;
+            font-style: italic;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #004d40; /* Verde muy oscuro */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .boton {
+            background-color: #007BFF; /* Azul */
+            color: #ffffff; /* Texto blanco */
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .boton:hover {
+            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+
+        .boton:active {
+            background-color: #004494; /* Azul más intenso al hacer clic */
+            transform: scale(0.98); /* Efecto de presión */
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .main-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-container {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .image-container img {
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-container h1 {
+                font-size: 1.8em;
+            }
+
+            .text-container p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            footer p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>Comedor Barato</h1>
+        <p>El mejor Leche para empezar tu día</p>
+    </header>
+    
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        <!-- Imagen de la cafetería -->
+        <div class="image-container">
+            <img src="https://www.elsoldeacapulco.com.mx/local/4555ta-restaurantes.jpg/ALTERNATES/LANDSCAPE_1140/restaurantes.jpg" alt="Imagen de café">
+        </div>
+        
+        <!-- Texto de bienvenida y llamada a la acción -->
+        <div class="text-container">
+            <h2>Bienvenido a El Comedor BARATO</h2>
+            <p>Precios accesibles y estómagos llenos. Nuestras opciones a continuación.</p>
+            <a href="/" class="cta-button">Regresar</a>
+        </div>
+    </div>
+
+    <!-- Sección de Productos -->
+    <div class="products">
+        <h2 id="productos">Productos</h2>
+        {% for row in resultado %}
+            <div class="product">
+                <h3>Nombre</h3>
+                <p>Nombre{{ row[1] }}</p>
+                <h3>Precio</h3>
+                <p>Precio: ${{ row[2] }}</p>
+                <h3>Descripción</h3>
+                <p>{{ row[3] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <!-- Sección de Testimonios -->
+    <div class="testimonials">
+        <h2>Opiniones de algunos clientes</h2>
+        <div class="testimonial">
+            <p>"Tremenda combinación de sabores, ¡solo faltó un gansito!"</p>
+            <p>- Alma Maria</p>
+        </div>
+        <div class="testimonial">
+            <p>"Pinche Nutrileche toda wenota. ¡Rico!"</p>
+            <p>- Elvi sTek</p>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Chanchitos SUKULENTOZ - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

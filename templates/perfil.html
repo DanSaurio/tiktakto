@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Dan Teran</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1e3932; /* Verde oscuro */
+            color: #000000;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3932;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #aaa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #2e8b57; /* Verde claro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .projects, .about {
+            margin-top: 20px;
+        }
+
+        .projects h2, .about h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .project {
+            background-color: #98fb98; /* Verde aún más claro */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .project a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+
+        .boton:active {
+            background-color: #004494;
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dan Teran</h1>
+        <h2>Ingeniero de Software</h2>
+    </header>
+
+    <div class="container">
+        <section class="profile">
+            <img src="https://pbs.twimg.com/media/FhE7XbkWYAAIh7V.jpg:large" alt="Tu Foto">
+            <div class="info">
+                <p><strong>Habilidades:</strong> HTML, CSS, C#, etc.</p>
+                <p><strong>Contacto:</strong> a22311168@gmail.com</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>Evolución Experiencia de Usuario</h3>
+                <p>Una suite de programas que demuestran la historia de las UI</p>
+                <a href="https://google.com" target="_blank">Ver proyecto</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>Acerca de mí</h2>
+            <p>Un estudiante de la UTH</p>
+            <a href="/" class="boton">Regresar</a>
+        </section>
+    </div>
+</body>
+</html>
